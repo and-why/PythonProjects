@@ -2,9 +2,10 @@ import pandas
 import datetime as dt
 import smtplib
 import random
+from info import pw, email
 
-MY_EMAIL = "andysmith2512@gmail.com"
-PASSWORD = "#########"
+MY_EMAIL = email
+PASSWORD = pw
 
 data_file = pandas.read_csv("birthdays.csv")
 data_dict = data_file.to_dict(orient="records")
