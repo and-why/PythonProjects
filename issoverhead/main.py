@@ -2,13 +2,13 @@ import requests
 from datetime import datetime
 import smtplib
 import sched, time
-from pw import password
+from pw import password, email
 
 MY_LAT = -38.171020
 # MY_LAT = 15.171020
 MY_LONG = 44.717460
 smtp_server = "smtp.gmail.com"
-MY_EMAIL = "andysmith2512@gmail.com"
+MY_EMAIL = email
 PW = password
 
 s = sched.scheduler(time.time, time.sleep)
