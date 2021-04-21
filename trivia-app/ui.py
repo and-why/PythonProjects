@@ -12,7 +12,7 @@ class QuizInterface:
         self.quiz = quiz_brain
         self.score = self.quiz.score
         self.window = Tk()
-        self.window.title("Quizzler")
+        self.window.title("Trivia App")
         self.window.config(bg=THEME_COLOR, padx=20)
         self.canvas = Canvas(bg=THEME_COLOR, highlightthickness=0)
         self.canvas.grid(column=0, row=1, columnspan=2, pady=20)
