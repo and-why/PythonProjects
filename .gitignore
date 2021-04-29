@@ -4,3 +4,4 @@ issoverhead/pw.py
 rain_alert/api_keys.py
 stock-news-notifier/keys.py
 fitness_tracker/keys.py
+flight-deal-tracker/keys.py
