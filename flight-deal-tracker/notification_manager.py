@@ -23,7 +23,7 @@ class NotificationManager:
         for row in data:
             message += f"{row['currency']} {row['price']}:\n" \
                        f"{row['cityFrom']}({row['fromCode']}) to " \
-                       f"{row['cityTo']}({row['toCode']}) — " \
+                       f"{row['cityTo']}({row['toCode']}) - " \
                        f"{row['countryName']}\n" \
                        f"Departs: {row['departureDate']}. Returns: {row['returnDate']}\n" \
                        f"Book here: {row['bookingLink']}'\n" \
@@ -36,10 +36,10 @@ class NotificationManager:
         with smtplib.SMTP('smtp.gmail.com') as mail_server:
             mail_server.starttls()
             mail_server.login(user=EMAIL, password=EMAIL_PW)
-            email = mail_server.sendmail(
+            mail_server.sendmail(
                 from_addr=EMAIL,
                 to_addrs=user_email,
                 msg=f"Subject: Flight deals \n\n\n{message}"
             )
-            print(email.text)
+            
 
